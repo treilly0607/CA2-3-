@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CA2_15_12_2020"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid RenderTransformOrigin="0.495,0.498">
+        <CheckBox x:Name="CBoxFT" Content="Full Time" HorizontalAlignment="Left" Height="18" Margin="51,20,0,0" VerticalAlignment="Top" Width="84"/>
+        <CheckBox x:Name="CBoxPT" Content="Part Time" HorizontalAlignment="Left" Height="18" Margin="190,20,0,0" VerticalAlignment="Top" Width="84"/>
+        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="344" Margin="51,43,0,0" VerticalAlignment="Top" Width="223" SelectionChanged="ListBox_SelectionChanged"/>
+        <TextBlock x:Name="TxtBlockFN" HorizontalAlignment="Left" Height="20" Margin="359,82,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="TxtBlockSn" HorizontalAlignment="Left" Height="20" Margin="359,127,0,0" TextWrapping="Wrap" Text="Surname" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="TxtBoxFN" HorizontalAlignment="Left" Height="20" Margin="455,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="TxtBoxSn" HorizontalAlignment="Left" Height="20" Margin="455,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <RadioButton x:Name="RBtnFT" Content="FT" HorizontalAlignment="Left" Height="20" Margin="455,184,0,0" VerticalAlignment="Top" Width="39"/>
+        <RadioButton x:Name="RBtnPT" Content="PT" HorizontalAlignment="Left" Height="20" Margin="499,184,0,0" VerticalAlignment="Top" Width="39"/>
+        <TextBlock x:Name="TxtBlockSalary" HorizontalAlignment="Left" Height="20" Margin="359,212,0,0" TextWrapping="Wrap" Text="Salary" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="TxtBlockHW" HorizontalAlignment="Left" Height="20" Margin="359,253,0,0" TextWrapping="Wrap" Text="Hours Worked" VerticalAlignment="Top" Width="88"/>
+        <TextBlock x:Name="TxtBlockHR" HorizontalAlignment="Left" Height="20" Margin="359,301,0,0" TextWrapping="Wrap" Text="Hourly Rate" VerticalAlignment="Top" Width="88"/>
+        <TextBox x:Name="TxtBoxSalary" HorizontalAlignment="Left" Height="20" Margin="457,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="TxtBoxHW" HorizontalAlignment="Left" Height="20" Margin="455,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="TxtBoxHR" HorizontalAlignment="Left" Height="20" Margin="455,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <TextBlock x:Name="TxtBlockMP1" HorizontalAlignment="Left" Height="20" Margin="359,354,0,0" TextWrapping="Wrap" Text="Monthly Pay" VerticalAlignment="Top" Width="88"/>
+        <TextBlock x:Name="TxtBlockMP2" HorizontalAlignment="Left" Height="20" Margin="448,354,0,0" TextWrapping="Wrap" Text="Hourly Rate" VerticalAlignment="Top" Width="88"/>
+        <Button x:Name="ClrBtn" Content="Clear" HorizontalAlignment="Left" Height="20" Margin="632,132,0,0" VerticalAlignment="Top" Width="93"/>
+        <Button x:Name="AddBtn" Content="Add" HorizontalAlignment="Left" Height="20" Margin="632,181,0,0" VerticalAlignment="Top" Width="93" Click="AddBtn_Click"/>
+        <Button x:Name="UpdateBtn" Content="Update" HorizontalAlignment="Left" Height="20" Margin="632,238,0,0" VerticalAlignment="Top" Width="93"/>
+        <Button x:Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Height="20" Margin="632,286,0,0" VerticalAlignment="Top" Width="93"/>
+
     </Grid>
 </Window>
