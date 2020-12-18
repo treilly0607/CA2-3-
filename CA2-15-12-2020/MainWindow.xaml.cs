@@ -31,6 +31,7 @@ namespace CA2_15_12_2020
             TxtBoxHR.Clear(); // clear the Hourly Rate Text Box
             TxtBoxHW.Clear(); // clear the Hours Worked Text Box
             TxtBoxSalary.Clear(); // clear the Salary Text Box
+            TxtBlockMP2.Text = "$0"; // clear monhtlypay text block
             RBtnFT.IsChecked = false; // clear the Full Time radial button
             RBtnPT.IsChecked = false; // clear the Part Time radial button
 
@@ -45,7 +46,7 @@ namespace CA2_15_12_2020
                 {
                     FullTimeEmployee emp = selectedEmployee as FullTimeEmployee;
                     TxtBoxSalary.Text = emp.Salary.ToString();
-                    TxtBlockMP2.Text = emp.CalculateMonthlyPay().ToString();
+                    TxtBlockMP2.Text = "$" + emp.CalculateMonthlyPay().ToString();
                     RBtnFT.IsChecked = true;
                     RBtnPT.IsChecked = false;
                 }
@@ -54,7 +55,7 @@ namespace CA2_15_12_2020
                     PartTimeEmployee emp = selectedEmployee as PartTimeEmployee;
                     TxtBoxHR.Text = emp.HourlyRate.ToString();
                     TxtBoxHW.Text = emp.HoursWorked.ToString();
-                    TxtBlockMP2.Text = emp.CalculateMonthlyPay().ToString();
+                    TxtBlockMP2.Text = "$" + emp.CalculateMonthlyPay().ToString();
                     RBtnPT.IsChecked = true;
                     RBtnFT.IsChecked = false;
                 }
@@ -127,6 +128,7 @@ namespace CA2_15_12_2020
             TxtBoxHR.Clear(); // clear the Hourly Rate Text Box
             TxtBoxHW.Clear(); // clear the Hours Worked Text Box
             TxtBoxSalary.Clear(); // clear the Salary Text Box
+            TxtBlockMP2.Text = "$0"; // clear monhtlypay text block
             RBtnFT.IsChecked = false; // clear the Full Time radial button
             RBtnPT.IsChecked = false; // clear the Part Time radial button
         }
@@ -146,8 +148,10 @@ namespace CA2_15_12_2020
 
                 ListBox.ItemsSource = filteredEmployees; // get list box to display filtered list
             }
-            else
-                ListBox.ItemsSource = employees;
+            else if (CBoxFT.IsChecked == true && CBoxPT.IsChecked == true) // if both boxes checked
+            {
+                ListBox.ItemsSource = employees; // get list box to display filtered list
+            }
         }
 
         private void ClrBtn_Click(object sender, RoutedEventArgs e) // event to clear text boxes
@@ -157,6 +161,7 @@ namespace CA2_15_12_2020
             TxtBoxHR.Clear(); // clear the Hourly Rate Text Box
             TxtBoxHW.Clear(); // clear the Hours Worked Text Box
             TxtBoxSalary.Clear(); // clear the Salary Text Box
+            TxtBlockMP2.Text = "$0"; // clear monhtlypay text block
             RBtnFT.IsChecked = false; // clear the Full Time radial button
             RBtnPT.IsChecked = false; // clear the Part Time radial button
         }
@@ -215,6 +220,7 @@ namespace CA2_15_12_2020
             TxtBoxHR.Clear(); // clear the Hourly Rate Text Box
             TxtBoxHW.Clear(); // clear the Hours Worked Text Box
             TxtBoxSalary.Clear(); // clear the Salary Text Box
+            TxtBlockMP2.Text = "$0"; // clear monhtlypay text block
             RBtnFT.IsChecked = false; // clear the Full Time radial button
             RBtnPT.IsChecked = false; // clear the Part Time radial button
         }
@@ -234,8 +240,11 @@ namespace CA2_15_12_2020
 
                 ListBox.ItemsSource = filteredEmployees; // get list box to display filtered list
             }
-            else
-                ListBox.ItemsSource = employees;
+            else if (CBoxFT.IsChecked == true && CBoxPT.IsChecked == true) // if both boxes checked
+            {
+                ListBox.ItemsSource = employees; // get list box to display filtered list
+            }
+            
         }
     }
 }
