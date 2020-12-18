@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid RenderTransformOrigin="0.495,0.498">
-        <CheckBox x:Name="CBoxFT" Content="Full Time" HorizontalAlignment="Left" Height="18" Margin="51,20,0,0" VerticalAlignment="Top" Width="84"/>
-        <CheckBox x:Name="CBoxPT" Content="Part Time" HorizontalAlignment="Left" Height="18" Margin="190,20,0,0" VerticalAlignment="Top" Width="84"/>
+        <CheckBox x:Name="CBoxFT" Content="Full Time" HorizontalAlignment="Left" Height="18" Margin="51,20,0,0" VerticalAlignment="Top" Width="84" Checked="CBoxFT_Checked"/>
+        <CheckBox x:Name="CBoxPT" Content="Part Time" HorizontalAlignment="Left" Height="18" Margin="190,20,0,0" VerticalAlignment="Top" Width="84" Checked="CBoxPT_Checked"/>
         <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="344" Margin="51,43,0,0" VerticalAlignment="Top" Width="223" SelectionChanged="ListBox_SelectionChanged"/>
         <TextBlock x:Name="TxtBlockFN" HorizontalAlignment="Left" Height="20" Margin="359,82,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="75"/>
         <TextBlock x:Name="TxtBlockSn" HorizontalAlignment="Left" Height="20" Margin="359,127,0,0" TextWrapping="Wrap" Text="Surname" VerticalAlignment="Top" Width="75"/>
@@ -23,11 +23,11 @@
         <TextBox x:Name="TxtBoxHW" HorizontalAlignment="Left" Height="20" Margin="455,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
         <TextBox x:Name="TxtBoxHR" HorizontalAlignment="Left" Height="20" Margin="455,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
         <TextBlock x:Name="TxtBlockMP1" HorizontalAlignment="Left" Height="20" Margin="359,354,0,0" TextWrapping="Wrap" Text="Monthly Pay" VerticalAlignment="Top" Width="88"/>
-        <TextBlock x:Name="TxtBlockMP2" HorizontalAlignment="Left" Height="20" Margin="448,354,0,0" TextWrapping="Wrap" Text="Hourly Rate" VerticalAlignment="Top" Width="88"/>
-        <Button x:Name="ClrBtn" Content="Clear" HorizontalAlignment="Left" Height="20" Margin="632,132,0,0" VerticalAlignment="Top" Width="93"/>
+        <TextBlock x:Name="TxtBlockMP2" HorizontalAlignment="Left" Height="20" Margin="448,354,0,0" TextWrapping="Wrap" Text="$0" VerticalAlignment="Top" Width="88"/>
+        <Button x:Name="ClrBtn" Content="Clear" HorizontalAlignment="Left" Height="20" Margin="632,132,0,0" VerticalAlignment="Top" Width="93" Click="ClrBtn_Click"/>
         <Button x:Name="AddBtn" Content="Add" HorizontalAlignment="Left" Height="20" Margin="632,181,0,0" VerticalAlignment="Top" Width="93" Click="AddBtn_Click"/>
-        <Button x:Name="UpdateBtn" Content="Update" HorizontalAlignment="Left" Height="20" Margin="632,238,0,0" VerticalAlignment="Top" Width="93"/>
-        <Button x:Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Height="20" Margin="632,286,0,0" VerticalAlignment="Top" Width="93"/>
+        <Button x:Name="UpdateBtn" Content="Update" HorizontalAlignment="Left" Height="20" Margin="632,238,0,0" VerticalAlignment="Top" Width="93" Click="UpdateBtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Height="20" Margin="632,286,0,0" VerticalAlignment="Top" Width="93" Click="DeleteBtn_Click"/>
 
     </Grid>
 </Window>
